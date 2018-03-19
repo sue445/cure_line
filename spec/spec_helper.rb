@@ -2,6 +2,7 @@ require "bundler/setup"
 require "cure_line"
 require "webmock/rspec"
 require "pry"
+require "rspec/its"
 
 Dir["#{__dir__}/support/**/*.rb"].each { |f| require f }
 
