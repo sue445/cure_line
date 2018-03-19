@@ -2,9 +2,9 @@ module CureLine
   require "open-uri"
 
   class UserClient
-    RESOURCE_URL_PREFIX = "https://obs.line-scdn.net/"
-
     attr_reader :user_id
+
+    include ResourceMethods
 
     # @param user_id [String]
     #
@@ -41,14 +41,6 @@ module CureLine
       raise "Not Found window.__PRELOADED_STATE__ in #{url}" unless m
 
       @preloaded_state = CureLine::Mash.new(JSON.parse(m[1]))
-    end
-
-    private
-
-    def resource_url(resource_id)
-      raise ArgumentError, "resource_id is required" unless resource_id
-
-      "https://obs.line-scdn.net/#{resource_id}"
     end
   end
 end
