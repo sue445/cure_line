@@ -25,6 +25,11 @@ module CureLine
       resource_url(preloaded_state["userHome"]["homeInfo"]["resourceId"])
     end
 
+    # @return [Array<CureLine::Mash>]
+    def feeds
+      preloaded_state["userHome"]["feeds"]
+    end
+
     # @return [CureLine::Mash]
     def preloaded_state
       return @preloaded_state if @preloaded_state
