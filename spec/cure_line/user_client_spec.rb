@@ -17,4 +17,10 @@ RSpec.describe CureLine::UserClient do
     its(["userValid"])  { should eq true }
     its(["writerMid"])  { should eq "_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE" }
   end
+
+  describe "header_url" do
+    subject { client.header_url }
+
+    it { should eq "https://obs.line-scdn.net/htzWKFLgwN1RRXiRaCAgwLR0sfTZOB28EU1VjYxs0IWYTAjkDUFViZhhgJjJHUmRR" }
+  end
 end
