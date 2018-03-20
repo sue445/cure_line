@@ -1,6 +1,8 @@
 # CureLine
 [LINE TIMELINE](https://timeline.line.me/) scraping tool
 
+[![Build Status](https://travis-ci.org/sue445/cure_line.svg?branch=master)](https://travis-ci.org/sue445/cure_line)
+
 ## Installation
 
 Add this line to your application's Gemfile:
