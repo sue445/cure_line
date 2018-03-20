@@ -1,5 +1,6 @@
 module CureLine
   require "open-uri"
+  require "json"
 
   class User
     attr_reader :user_id
