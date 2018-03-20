@@ -1,7 +1,7 @@
 module CureLine
   require "open-uri"
 
-  class UserClient
+  class User
     attr_reader :user_id
 
     include ResourceMethods
@@ -10,7 +10,7 @@ module CureLine
     #
     # @example
     #   # read https://timeline.line.me/user/_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE
-    #   client = CureLine::UserClient.new("_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE")
+    #   user = CureLine::User.new("_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE")
     def initialize(user_id)
       @user_id = user_id
     end

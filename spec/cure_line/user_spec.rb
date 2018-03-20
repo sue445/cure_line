@@ -1,5 +1,5 @@
-RSpec.describe CureLine::UserClient do
-  let(:client) { CureLine::UserClient.new(user_id) }
+RSpec.describe CureLine::User do
+  let(:client) { CureLine::User.new(user_id) }
 
   let(:user_id) { "_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE" }
 
