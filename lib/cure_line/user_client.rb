@@ -25,9 +25,9 @@ module CureLine
       resource_url(preloaded_state["userHome"]["homeInfo"]["resourceId"])
     end
 
-    # @return [Array<CureLine::Mash>]
-    def feeds
-      preloaded_state["userHome"]["feeds"]
+    # @return [Array<CureLine::Post>]
+    def posts
+      preloaded_state["userHome"]["feeds"].map { |feed| CureLine::Post.new(feed) }
     end
 
     # @return [CureLine::Mash]

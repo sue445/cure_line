@@ -24,16 +24,9 @@ RSpec.describe CureLine::UserClient do
     it { should eq "https://obs.line-scdn.net/htzWKFLgwN1RRXiRaCAgwLR0sfTZOB28EU1VjYxs0IWYTAjkDUFViZhhgJjJHUmRR" }
   end
 
-  describe "#feeds" do
-    subject(:feeds) { client.feeds }
+  describe "#posts" do
+    subject { client.posts }
 
     its(:count) { should eq 10 }
-
-    describe "[0]" do
-      subject { feeds[0] }
-
-      it { should have_key("feedInfo") }
-      it { should have_key("post") }
-    end
   end
 end
