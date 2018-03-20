@@ -10,10 +10,10 @@ before_install:
 - gem update --system --no-document
 - gem install bundler -v 1.16.1 --no-document
 before_script:
-#- export CODECLIMATE_REPO_TOKEN=
+- export CODECLIMATE_REPO_TOKEN=29bb92272b70024f792a291432c81de6da73524199d344128630289f14367f9b
 script:
 - bundle exec rspec
-#- bundle exec codeclimate-test-reporter
+- bundle exec codeclimate-test-reporter
 branches:
   only:
   - master

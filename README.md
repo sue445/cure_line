@@ -2,6 +2,8 @@
 [LINE TIMELINE](https://timeline.line.me/) scraping tool
 
 [![Build Status](https://travis-ci.org/sue445/cure_line.svg?branch=master)](https://travis-ci.org/sue445/cure_line)
+[![Maintainability](https://api.codeclimate.com/v1/badges/25259e188e96c1b78164/maintainability)](https://codeclimate.com/github/sue445/cure_line/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/sue445/cure_line/badge.svg?branch=master)](https://coveralls.io/github/sue445/cure_line?branch=master)
 
 ## Installation
 
