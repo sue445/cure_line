@@ -35,8 +35,11 @@ module CureLine
     def preloaded_state
       return @preloaded_state if @preloaded_state
 
+      options = {}
+      options["User-Agent"] = CureLine.config.user_agent if CureLine.config.user_agent
+
       url = "https://timeline.line.me/user/#{user_id}"
-      html = open(url).read
+      html = open(url, options).read
 
       m = html.match(/window.__PRELOADED_STATE__\s*=\s*({.+})/)
       raise "Not Found window.__PRELOADED_STATE__ in #{url}" unless m

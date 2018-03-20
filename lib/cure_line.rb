@@ -2,6 +2,7 @@ require "cure_line/version"
 require "hashie"
 
 module CureLine
+  autoload :Config,          "cure_line/config"
   autoload :Mash,            "cure_line/mash"
   autoload :Post,            "cure_line/post"
   autoload :ResourceMethods, "cure_line/resource_methods"
@@ -17,5 +18,10 @@ module CureLine
   #   user = CureLine.user("_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE")
   def self.user(user_id)
     User.new(user_id)
+  end
+
+  # @return [CureLine::Config]
+  def self.config
+    @config ||= Config.new
   end
 end

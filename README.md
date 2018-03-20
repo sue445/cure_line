@@ -57,6 +57,13 @@ post.photo_urls
 #=> ["https://obs.line-scdn.net/h5XG4_2KndnZXIWV4GHdxDwZTY0ZUe34iR3snQghNNkNUfSx0Qy4lRF9PPERUeS8iQy9gFwtOYENTfg"]
 ```
 
+### [Config](lib/cure_line/config.rb)
+```ruby
+CureLine.config.user_agent = "XXXX"
+```
+
+* `user_agent` : User Agent
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
