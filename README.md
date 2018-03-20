@@ -1,8 +1,5 @@
 # CureLine
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cure_line`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+[LINE TIMELINE](https://timeline.line.me/) scraping tool
 
 ## Installation
 
@@ -22,7 +19,43 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+# read https://timeline.line.me/user/_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE
+user = CureLine.user("_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE")
+
+user.info
+#=> {"mid"=>"_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE",
+# "nickname"=>"プリキュア",
+# "pictureUrl"=>"https://profile.line-scdn.net/0hU_sA3K0gCnBOOCZuQUx1J3J9BB05Fgw4Nl9BQmxsUEZjCU0jewlCFWo-UEk3CRhxdQtCQ20_VRBk",
+# "userValid"=>true,
+# "writerMid"=>"_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE"}
+
+user.header_url
+#=> "https://obs.line-scdn.net/htzWKFLgwN1RRXiRaCAgwLR0sfTZOB28EU1VjYxs0IWYTAjkDUFViZhhgJjJHUmRR"
+
+post = user.posts.first 
+
+post.nickname
+#=> "プリキュア"
+
+post.picture_url
+#=> "https://profile.line-scdn.net/0hU_sA3K0gCnBOOCZuQUx1J3J9BB05Fgw4Nl9BQmxsUEZjCU0jewlCFWo-UEk3CRhxdQtCQ20_VRBk"
+
+post.post_url
+#=> "https://timeline.line.me/post/_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE/1152127900305060448"
+
+post.text
+#=> "プリキュアになってから、さあやとほまれとますます仲良くなれて、\n超うれしー！！＼(^o^)／\n今日はビューティーハリーで、お互いに洋服をコーディネイトし合ったんだ～。\n\nさあやは、大人っぽいデザインのスカートがめっちゃ似合ってた！\nう～ん、絵のモデルさんになれそうなくらい素敵！( *´艸｀)\n\nほまれはオシャレ上級者しか着こなせないような、最先端のオールインワンがぴったり！\n背が高くて、足が長い人はいいな～、うぅ……(T_T)\n\nはぐたんはくまさんの耳がついたフードをかぶって……。\nきゃ、きゃ、きゃわたん～～～～(・´з`・)\n拝みたくなる可愛さでした♡\n\nで……私は！？私は何が似合うかな！？\nえっ……ハリーおすすめのどデカイ虎の絵が描いてあるトレーナー！！？\nみんな、似合ってるって言ってくれるけど……お腹抱えて笑ってるじゃん！！ヽ(`Д´)ﾉﾌﾟﾝﾌﾟﾝ\n\nう～ん、でも言われてみれば、たしかに似合ってるような……。\nこれを着こなせるって、逆にすごいかも☆(^ε^)\nはぁ～、今日もいい一日でした！"
+
+post.created_time
+#=> 2018-03-17 18:30:03 +0900
+
+post.updated_time
+#=> 2018-03-17 18:30:03 +0900
+
+post.photo_urls
+#=> ["https://obs.line-scdn.net/h5XG4_2KndnZXIWV4GHdxDwZTY0ZUe34iR3snQghNNkNUfSx0Qy4lRF9PPERUeS8iQy9gFwtOYENTfg"]
+```
 
 ## Development
 
@@ -32,7 +65,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/cure_line.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sue445/cure_line.
 
 ## License
 
