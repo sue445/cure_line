@@ -1,5 +1,27 @@
-sudo: false
 language: ruby
 rvm:
-  - 2.5.0
-before_install: gem install bundler -v 1.16.1
+- 2.3.3
+- 2.4.1
+- 2.5.0
+- ruby-head
+bundler_args: "--jobs=4"
+cache: bundler
+before_install:
+- gem update --system --no-document
+- gem install bundler -v 1.16.1 --no-document
+before_script:
+- export CODECLIMATE_REPO_TOKEN=29bb92272b70024f792a291432c81de6da73524199d344128630289f14367f9b
+script:
+- bundle exec rspec
+- bundle exec codeclimate-test-reporter
+branches:
+  only:
+  - master
+notifications:
+  email: false
+  slack:
+    secure: u7fcioS9qrq1phAZ2sr6kueIwyIsZCLHWvrdY75Fc/+0STnSwYEVQ24rX1yY2A+ThJdfOcqriUb4txpH1QmGQaf4GgddMdhslr+uBA5ISQuBgI4QZ5ePb8w7CyJGGkZB6+61QMY5InorWuNxOcTcOhne40KTkdieH0HP2QIu2vRZlxWNrCZ3dlkIsVt5ndPRT5/+0RPicJthj/cSlcsavr/W68XV8qWx9xFZmVmxLRMuoo6fR2SH6qAn2xfrvuG0NUVnZWsoMaB7J4A3qZaeZmq5vbYlP6rdp+VyBZpDl84VpbCEGtXXMS0vE+qyRPUWQGWATGlnP3inp6dZ6wumiutDRDVkSH3zFGJfL3q6dXJRFiYFAP8H9vVBMKvQYqPBfRv1mOmdA9hyRTlkGbOogh4lv/+NCs8kbfvoTQ9ywSR9QWgfc6U066+SwXJ7PKgaRs+gYLi9H5TOprwhEgSSmrHD2kIepQwDdAttLM84msAoz+FNx2Uwt1tvvvfjfKanTlqQjZQed7cTxlevA0SHS/EM0MoGHPHrwmWA8LPgHxAGYdPKLFfQxNJNpLBi/WDnVFYE5xVxyXklJcAsjWXu4lDPOT/FurovsJSk+SpNOINAnvaD50RJDQCDwdv5qGuucb0dldJDaDC/wp6GDNecZWo6cUo7lnUbt/odrl/d6k0=
+matrix:
+  allow_failures:
+  - rvm: ruby-head
+sudo: false
