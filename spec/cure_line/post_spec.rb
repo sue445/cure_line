@@ -1,7 +1,8 @@
 RSpec.describe CureLine::Post do
   let(:post) { CureLine::Post.new(feed_hash) }
 
-  let(:feed_hash) { preloaded_state["userHome"]["feeds"][0] }
+  let(:feed_hash)  { preloaded_state["userHome"]["feeds"][feed_index] }
+  let(:feed_index) { 0 }
 
   let(:preloaded_state) do
     CureLine::Mash.new(JSON.parse(fixture("user.json")))
@@ -74,5 +75,11 @@ RSpec.describe CureLine::Post do
 
     its(:count) { should eq 1 }
     its([0]) { should eq "https://obs.line-scdn.net/h5XG4_2KndnZXIWV4GHdxDwZTY0ZUe34iR3snQghNNkNUfSx0Qy4lRF9PPERUeS8iQy9gFwtOYENTfg" }
+
+    context "When photo is not found" do
+      let(:feed_index) { 5 }
+
+      it { should eq [] }
+    end
   end
 end

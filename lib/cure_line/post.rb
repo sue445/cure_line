@@ -46,7 +46,7 @@ module CureLine
 
     # @return [Array<Hash>]
     def medias
-      dig("post", "contents", "media")
+      dig("post", "contents", "media") || []
     end
   end
 end
