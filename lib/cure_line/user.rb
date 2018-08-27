@@ -41,8 +41,8 @@ module CureLine
       url = "https://timeline.line.me/user/#{user_id}"
       html = open(url, options).read
 
-      m = html.match(/window.__PRELOADED_STATE__\s*=\s*({.+})/)
-      raise "Not Found window.__PRELOADED_STATE__ in #{url}" unless m
+      m = html.match(%r{<script id="init_data" type="application/json">({.+})</script>})
+      raise %Q(Not Found <script id="init_data" type="application/json"> in #{url}) unless m
 
       @preloaded_state = CureLine::Mash.new(JSON.parse(m[1]))
     end
