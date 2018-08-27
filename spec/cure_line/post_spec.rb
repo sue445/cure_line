@@ -23,7 +23,7 @@ RSpec.describe CureLine::Post do
   describe "#post_url" do
     subject { post.post_url }
 
-    it { should eq "https://timeline.line.me/post/_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE/1152127900305060448" }
+    it { should eq "https://timeline.line.me/post/_dYbbV3vmaJrvqBoV5ZlpCbPN2CWUZdDQayBvjBE/1153518940605069991" }
   end
 
   describe "#text" do
@@ -31,27 +31,21 @@ RSpec.describe CureLine::Post do
 
     let(:text) do
       <<~EOS.strip
-        プリキュアになってから、さあやとほまれとますます仲良くなれて、
-        超うれしー！！＼(^o^)／
-        今日はビューティーハリーで、お互いに洋服をコーディネイトし合ったんだ～。
+        夏休み、めっちゃ楽しい～～～～ヾ(≧▽≦)ﾉいえーい！
+
+        みんなとの想い出がいっぱいできて、最高の夏だね！！
+        残りの夏休みも思いっきりエンジョイしよう……え、夏休みの宿題？？
         
-        さあやは、大人っぽいデザインのスカートがめっちゃ似合ってた！
-        う～ん、絵のモデルさんになれそうなくらい素敵！( *´艸｀)
+        めちょっく！！まだ全然終わってないんだった～～！！Σ(ﾟдﾟlll)よーし、みんなで集まって勉強会しよーう！
+        って、ええ！？さあやもほまれも、えみるもルールーもほとんど終わってる！？Σ(ﾟДﾟ)
         
-        ほまれはオシャレ上級者しか着こなせないような、最先端のオールインワンがぴったり！
-        背が高くて、足が長い人はいいな～、うぅ……(T_T)
+        う、うそでしょ……。終わってないの私だけ～！？(ノД`)・゜・。
+        はう～、頑張らなくちゃ……。ん？はぐたん、手伝ってくれるの？
         
-        はぐたんはくまさんの耳がついたフードをかぶって……。
-        きゃ、きゃ、きゃわたん～～～～(・´з`・)
-        拝みたくなる可愛さでした♡
+        「がんばえ～(^▽^)」
         
-        で……私は！？私は何が似合うかな！？
-        えっ……ハリーおすすめのどデカイ虎の絵が描いてあるトレーナー！！？
-        みんな、似合ってるって言ってくれるけど……お腹抱えて笑ってるじゃん！！ヽ(`Д´)ﾉﾌﾟﾝﾌﾟﾝ
-        
-        う～ん、でも言われてみれば、たしかに似合ってるような……。
-        これを着こなせるって、逆にすごいかも☆(^ε^)
-        はぁ～、今日もいい一日でした！
+        はぐたん、応援ありがとう！はぐたんの応援があれば頑張れる！！
+        フレフレ私ー！！
       EOS
     end
 
@@ -61,25 +55,19 @@ RSpec.describe CureLine::Post do
   describe "#created_time" do
     subject { post.created_time }
 
-    it { should eq Time.at(1521279003) }
+    it { should eq Time.at(1535189406) }
   end
 
   describe "#updated_time" do
     subject { post.created_time }
 
-    it { should eq Time.at(1521279003) }
+    it { should eq Time.at(1535189406) }
   end
 
   describe "#photo_urls" do
     subject { post.photo_urls }
 
     its(:count) { should eq 1 }
-    its([0]) { should eq "https://obs.line-scdn.net/h5XG4_2KndnZXIWV4GHdxDwZTY0ZUe34iR3snQghNNkNUfSx0Qy4lRF9PPERUeS8iQy9gFwtOYENTfg" }
-
-    context "When photo is not found" do
-      let(:feed_index) { 5 }
-
-      it { should eq [] }
-    end
+    its([0]) { should eq "https://obs.line-scdn.net/hYfs8Zv3PGkhjLQlGLHsdMTJfWilicBVLci5Ie2NIWykwc0QaIC8cJmxJXXFkJkZKdycMJjgTX3pmcg" }
   end
 end
