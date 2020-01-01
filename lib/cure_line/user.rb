@@ -39,7 +39,7 @@ module CureLine
       options["User-Agent"] = CureLine.config.user_agent if CureLine.config.user_agent
 
       url = "https://timeline.line.me/user/#{user_id}"
-      html = open(url, options).read
+      html = URI.open(url, options).read
 
       m = html.match(%r{<script id="init_data" type="application/json">({.+})</script>})
       raise %Q(Not Found <script id="init_data" type="application/json"> in #{url}) unless m
