@@ -1,5 +1,11 @@
 ## Unreleased
-[full changelog](http://github.com/sue445/cure_line/compare/v1.0.0...master)
+[full changelog](http://github.com/sue445/cure_line/compare/v1.0.1...master)
+
+## v1.0.1
+[full changelog](http://github.com/sue445/cure_line/compare/v1.0.0...v1.0.1)
+
+* Enable MFA requirement for gem releasing
+  * https://github.com/sue445/cure_line/pull/30
 
 ## v1.0.0
 [full changelog](http://github.com/sue445/cure_line/compare/v0.1.3...v1.0.0)
