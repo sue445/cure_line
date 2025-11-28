@@ -1,5 +1,11 @@
 ## Unreleased
-[full changelog](http://github.com/sue445/cure_line/compare/v1.0.1...master)
+[full changelog](http://github.com/sue445/cure_line/compare/v1.0.2...master)
+
+## [v1.0.2](https://github.com/sue445/cure_line/releases/tag/v1.0.2)
+[full changelog](http://github.com/sue445/cure_line/compare/v1.0.1...v1.0.2)
+
+* Release gem from GitHub Actions
+  * https://github.com/sue445/cure_line/pull/54
 
 ## v1.0.1
 [full changelog](http://github.com/sue445/cure_line/compare/v1.0.0...v1.0.1)
