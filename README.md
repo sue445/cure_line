@@ -3,7 +3,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/cure_line.svg)](https://badge.fury.io/rb/cure_line)
 [![test](https://github.com/sue445/cure_line/actions/workflows/test.yml/badge.svg)](https://github.com/sue445/cure_line/actions/workflows/test.yml)
-[![Maintainability](https://api.codeclimate.com/v1/badges/25259e188e96c1b78164/maintainability)](https://codeclimate.com/github/sue445/cure_line/maintainability)
+[![Maintainability](https://qlty.sh/gh/sue445/projects/cure_line/maintainability.svg)](https://qlty.sh/gh/sue445/projects/cure_line)
 [![Coverage Status](https://coveralls.io/repos/github/sue445/cure_line/badge.svg?branch=master)](https://coveralls.io/github/sue445/cure_line?branch=master)
 
 ## Installation
