@@ -1,5 +1,11 @@
 ## Unreleased
-[full changelog](http://github.com/sue445/cure_line/compare/v1.0.2...master)
+[full changelog](http://github.com/sue445/cure_line/compare/v1.0.3...master)
+
+## [v1.0.3](https://github.com/sue445/cure_line/releases/tag/v1.0.3)
+[full changelog](http://github.com/sue445/cure_line/compare/v1.0.2...v1.0.3)
+
+* Migrate release_gem workflow to sue445/workflows (Also testing the gem release)
+  * https://github.com/sue445/cure_line/pull/94
 
 ## [v1.0.2](https://github.com/sue445/cure_line/releases/tag/v1.0.2)
 [full changelog](http://github.com/sue445/cure_line/compare/v1.0.1...v1.0.2)
